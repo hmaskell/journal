@@ -19,28 +19,55 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 40em;
   line-height: 0;
-  margin-top:-100px;
+  padding-top:0px;
   margin-left:0%;
   text-transform: uppercase;
   text-align: center;
+  
 }
+
+input[type=input]{
+  z-index: 2;
+position: absolute;
+top: 9px;
+left: 0;
+background: none;
+margin-top: -20px;
+}
+
+
 
 h2{
   font-family: 'Inter', sans-serif;
   font-size: 3em;
 }
 
-#journalReadout p{
+#journalReadout{
   font-family: 'Inter', sans-serif;
   font-size: 2em;
   opacity: 50%;
+}
+
+#journalReadout p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  opacity: 40%;
+  margin:auto;
 }
 
 /*Divs*/
 
 .background{
   margin: 2em;
+  display: flex;
+  width:100%;
+
 }
+#journalReadout{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .center{
   display: flex;
   width: 100%;
@@ -61,6 +88,7 @@ $gray: #ffffff;
   padding: 15px 0 0;
   margin-top: 10px;
   width: 50%;
+  
 }
 
 .form__field {
@@ -90,19 +118,9 @@ $gray: #ffffff;
 
 .form__field:focus {
   ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: $primary;
-    font-weight:700;    
-  }
-  padding-bottom: 6px;  
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, $primary,$secondary);
-  border-image-slice: 1;
+    text-decoration: none;
+    border:none;  
+  
 }
 /* reset input */
 .form__field{
@@ -137,14 +155,7 @@ body {
  * A better looking default horizontal rule
  */
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
